@@ -1,0 +1,46 @@
+name: Corilia
+version: 1.0.0
+api-version: 1.19
+main: me.steinlbert.main
+description: Das Corilia Eroberungs Plugin!
+author: steinlbert
+commands:
+  corilia-new-city:
+    usage: /<command> <city>
+    description: Erstellt eine neue Stadt
+  corilia-config:
+    usage: /<command>
+    description: Zeigt die Konfiguration der Städte
+  conquest:
+    usage: /<command> <city> <on|off> | /<command> add-attacker <player> | /<command> add-defender <player> | /<command> remove-attacker <player> | /<command> remove-defender <player> | /<command> list-teams
+    description: Verwaltet Eroberungen
+  corilia-add-player:
+    usage: /<command> <city> <player>
+    description: Fügt einen Bewohner zu einer Stadt hinzu
+  corilia-radius:
+    usage: /<command> <city> <radius>
+    description: Setzt den Schutzradius einer Stadt
+  corilia-remove-player:
+    usage: /<command> <city> <player>
+    description: Entfernt einen Spieler aus einer Stadt
+  corilia-remove-city:
+    usage: /<command> <city>
+    description: Entfernt eine Stadt
+  home:
+    usage: /<command> [home]
+    description: Teleportiert zu einem Home
+  set-home:
+    usage: /<command> <home>
+    description: Setzt ein Home
+  remove-home:
+    usage: /<command> <home>
+    description: Entfernt ein Home
+  list-homes:
+    usage: /<command>
+    description: Listet alle Homes
+  back:
+    usage: /<command>
+    description: Teleportiert zurück zur letzten Position
+  private:
+    usage: /<command>
+    description: Macht eine Truhe privat
