@@ -1,0 +1,66 @@
+name: Minerim
+version: 1.0.0
+main: me.steinlbert.pl.minerim.main
+description: Minerim plugin
+author: steinlbert
+authors: [Steinlbert]
+depend: [PermissionsEX]
+api-version: 1.12.2
+commands:
+  Minerim:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  Minerim-time:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  Minerim-help:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  Minerim-playtime:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  Minerim-Deaths:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  Minerim-Permissions:
+    usage: /<command>
+    description: Allgemeines Plugin Informationen
+  segen:
+    usage: /<command>
+    description: Gibt Segen
+  Job-Add-Miner:
+    usage: /<command>
+    description: In Arbeit
+  inv:
+    usage: /<command>
+    description: inventar
+  invaccept:
+    usage: /<command>
+    description: inventar
+  invdeny:
+    usage: /<command>
+    description: inventar
+  invadmin:
+    usage: /<command>
+    description: inventar
+  Kopfgeld-set-Weisslauf:
+    usage: /<command>
+    description: Setzt
+  Kopfgeld-list-Weisslauf:
+    usage: /<command>
+    description: Setzt
+  Kopfgeld-remove-Weisslauf:
+    usage: /<command>
+    description: Setzt
+  Kopfgeld-set-einsamkeit:
+    usage: /<command>
+    description: Setzt
+  Kopfgeld-list-einsamkeit:
+    usage: /<command>
+    description: Setzt
+  Kopfgeld-remove-einsamkeit:
+    usage: /<command>
+    description: Setzt
+  Score:
+    usage: /<command>
+    description: Setzt
