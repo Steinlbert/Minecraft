@@ -40,17 +40,17 @@ public class chestlistener implements Listener {
             for (String chestLoc : chests.getKeys(false)) {
                 ConfigurationSection chest = chests.getConfigurationSection(chestLoc);
                 if (chest != null) {
-                    HashMap<String, String> permissions = new HashMap<>();
+                    HashMap<String, String> permissions = new HashMap<>(); 				//Lädt die persmissions für jede kiste wenn nichts in hasmap ist
                     for (String player : chest.getKeys(false)) {
                         permissions.put(player, chest.getString(player));
                     }
-                    String newLoc = chestLoc.replace(".", ",");
+                    String newLoc = chestLoc.replace(".", ","); //ist notwendig damit die werte richtig gesetzt werden
                     chestData.put(newLoc, permissions);
                     //chestsettings.set(newLoc, permissions);
                     //chestsettings.set(chestLoc, null);
                 } 
                 
-                //Migration script a bit buggy
+                //Migration script a bit buggy komplette klasse neu erstellt anderer struktur
                 /*else {
                     // Migrate nested structure (world.-178.74.128)
                     ConfigurationSection worldSection = chests.getConfigurationSection(chestLoc);
@@ -96,6 +96,7 @@ public class chestlistener implements Listener {
         //Bukkit.getConsoleSender().sendMessage(ChatColor.BLUE + "[DEBUG] Loaded chestData: " + chestData.toString());
     }
 
+    //Methoden wenn auf die kisten zugegriffen wird...
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent Inv) {
         if (Inv.getAction().toString().contains("RIGHT_CLICK_BLOCK") && Inv.getClickedBlock() != null) {

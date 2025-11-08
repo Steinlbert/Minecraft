@@ -13,11 +13,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.steinlbert.main;
 
 public class Chestconfig implements Listener {
+	//zuerst null platzhalter damit kein fehler kommt
     private static FileConfiguration customConfig = null;
     private static File customConfigFile = null;
     static main plugin = main.getPlugin(main.class);
     private static boolean needsSave = false;
 
+    
     public static void reloadCustomConfig() {
         if (customConfigFile == null) {
             customConfigFile = new File(plugin.getDataFolder(), "chests.yml");

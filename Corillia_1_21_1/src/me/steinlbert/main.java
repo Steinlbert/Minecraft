@@ -23,12 +23,16 @@ import java.util.HashMap;
 public class main extends JavaPlugin {
     private static main plugin;
 
+    //public Hasmap für Kistenzugriff und City-gebiet
     public static HashMap<String, HashMap<String, Location>> homesData = new HashMap<>();
     public static HashMap<String, HashMap<String, String>> chestData = new HashMap<>();
 
+    
+    //Start des Plugin beim Laden
     @Override
     public void onEnable() {
         plugin = this;
+        //Config Methoden - 5 Klassen std. klasse mit Grokh verbessert
         Conquestconfig.saveDefaultConfig();
         Cityconfig.saveDefaultConfig();
         combatconfig.saveDefaultConfig();
@@ -41,7 +45,8 @@ public class main extends JavaPlugin {
 
         String pluginname = getDescription().getName();
         getServer().getConsoleSender().sendMessage(ChatColor.GOLD + pluginname + " Spigot-Plugin Activate!");
-        //commands
+       
+        //commands Player (für alle befehle in pluginyml schauen)
         getCommand("corilia-config").setExecutor((CommandExecutor) new cmd());
         getCommand("corilia-radius").setExecutor((CommandExecutor) new cmd());
         getCommand("conquest").setExecutor((CommandExecutor) new cmd());
@@ -66,6 +71,7 @@ public class main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new combatlock(), this);
     }
 
+    //Beim entladen des plugins beim runterfahren des servers (config speichert wenn es als notwendig gekennzeichnet wird..)
     @Override
     public void onDisable() {
         if (Conquestconfig.needsSave()) {
